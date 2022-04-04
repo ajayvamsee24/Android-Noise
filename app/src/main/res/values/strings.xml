@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Android Noise</string>
+    <string name="play">PLAY</string>
+    <string name="stop">STOP</string>
+    <string name="start">START</string>
+    <string name="pause">PAUSE</string>
+    <string name="press_start_button_to_recording">Press START button to recording</string>
+    <string name="recording">Recording...</string>
+    <string name="show_amplitude">Show Amplitude</string>
+    <string name="noise_suppressor">Noise Suppressor</string>
+</resources>

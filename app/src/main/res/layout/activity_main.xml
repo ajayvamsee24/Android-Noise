@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/startStopRecordingButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="" />
+
+    <Button
+        android:id="@+id/playAudio"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:text="@string/play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/startStopRecordingButton" />
+
+    <Button
+        android:id="@+id/stopAudio"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/startStopRecordingButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:text="@string/start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/pauseResumeRecordingButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pause"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/startStopRecordingButton"
+        app:layout_constraintStart_toStartOf="@+id/startStopRecordingButton"
+        app:layout_constraintTop_toBottomOf="@+id/startStopRecordingButton"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/press_start_button_to_recording"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/recordingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recording"
+        android:textColor="#FF0000"
+        android:textSize="40sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/showAmplitudeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/showAmplitudeLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_amplitude"
+        app:layout_constraintBottom_toBottomOf="@+id/showAmplitudeSwitch"
+        app:layout_constraintStart_toEndOf="@+id/showAmplitudeSwitch"
+        app:layout_constraintTop_toTopOf="@+id/showAmplitudeSwitch" />
+
+    <Switch
+        android:id="@+id/noiseSuppressorSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/showAmplitudeSwitch"
+        app:layout_constraintStart_toEndOf="@+id/showAmplitudeLabelTextView"
+        app:layout_constraintTop_toTopOf="@+id/showAmplitudeSwitch" />
+
+    <TextView
+        android:id="@+id/noiseSuppressorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/noise_suppressor"
+        app:layout_constraintBottom_toBottomOf="@+id/noiseSuppressorSwitch"
+        app:layout_constraintStart_toEndOf="@+id/noiseSuppressorSwitch"
+        app:layout_constraintTop_toTopOf="@+id/noiseSuppressorSwitch" />
+
+    <TextView
+        android:id="@+id/amplitudeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/showAmplitudeSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/showAmplitudeSwitch"
+        tools:text="Amplitude : " />
+</androidx.constraintlayout.widget.ConstraintLayout>
